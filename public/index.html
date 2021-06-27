@@ -39,6 +39,11 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js" async=""></script>
+    <script src="https://chat-assets.frontapp.com/v1/chat.bundle.js" onload="initFrontChat()" async></script>
+    <script>
+      function initFrontChat() {
+       window.FrontChat('init', { chatId: "%REACT_APP_CHAT_ID%", useDefaultLauncher: false });
+      };
+    </script>
   </body>
 </html>
